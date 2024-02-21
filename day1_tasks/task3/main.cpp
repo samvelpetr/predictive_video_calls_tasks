@@ -9,17 +9,31 @@ int main(int argc, char *argv[])
 
     QTextStream in(stdin);
 
-    qDebug() << "Enter number :";
-
-
-    int num = in.readLine().toInt();
-
-    if(num > 0){
-        qDebug() << "Number is positve";
-    }else if(num < 0){
-        qDebug() << "Number is negative";
-    }else{
-        qDebug() << "Number is zero";
+    char grade = 'A';
+    switch (grade){
+        case 'A':
+        qDebug() << "80-100"
+        break;
+        case 'B':
+        qDebug() << "60-80"
+        break;
+        case 'C':
+        qDebug() << "40-60"
+        break;
+        case 'D':
+        qDebug() << "20-40"
+        break;
+        case 'E':
+        qDebug() << "0-20"
+        break;
+        default:
+        qDebug() << "Wrong Symbol"
+        break;
     }
+    for (int i = 0; i <=10 ; i++)
+    {
+        qDebug() << i;
+    }
+    
     return a.exec();
 }
